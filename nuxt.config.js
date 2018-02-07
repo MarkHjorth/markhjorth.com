@@ -13,8 +13,11 @@ module.exports = {
     title: 'Mark Hjorth - Software, Game, Web and Android App Development',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Mark Hjorth Does Software Development, Game Development, Android App Development, Web Development, Quality Assurance, Creates Distributed Systems, and more...' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui'},
+      { hid: 'description', name: 'description', content: 'Mark Hjorth Does Software Development, Game Development, Android App Development, Web Development, Quality Assurance, Creates Distributed Systems, and more...' },
+      { name: 'nativeUI', content: 'true' },
+      { name: 'apple-mobile-web-app-capable', content: 'true'},
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'default'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
