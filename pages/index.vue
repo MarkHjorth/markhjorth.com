@@ -6,18 +6,18 @@
 
     <div class="card">
       <div class="card-image">
-        <nuxt-link to="./content"><img src="~/assets/placeholders/720x720.png" width="720" height="720"></nuxt-link>
+        <nuxt-link to="./portfolio/websites/art-by-ch-website"><img src="~/assets/placeholders/720x720.png" width="720" height="720"></nuxt-link>
       </div>
       <div class="card-info">
         <div class="card-title">
-          <nuxt-link to="./content">
+          <nuxt-link to="./portfolio/websites/art-by-ch-website">
             <h3>What is beyond this card will amaze you!</h3>
           </nuxt-link>
         </div>
         <div class="card-category">
           <nuxt-link to="./portfolio">Portfolio</nuxt-link>
           <span> / </span>
-          <nuxt-link to="./content">Clickbait</nuxt-link>
+          <nuxt-link to="./portfolio/websites">Websites</nuxt-link>
         </div>
       </div>
     </div>
@@ -25,18 +25,18 @@
 
     <div class="card">
       <div class="card-image">
-        <nuxt-link to="./content"><img src="~/assets/placeholders/720x540.png" width="720" height="540"></nuxt-link>
+        <nuxt-link to="./portfolio/websites/art-by-ch-website"><img src="~/assets/placeholders/720x540.png" width="720" height="540"></nuxt-link>
       </div>
       <div class="card-info">
         <div class="card-title">
-          <nuxt-link to="./content">
+          <nuxt-link to="./portfolio/websites/art-by-ch-website">
             <h3>What is beyond this card will amaze you!</h3>
           </nuxt-link>
         </div>
         <div class="card-category">
           <nuxt-link to="./portfolio">Portfolio</nuxt-link>
           <span> / </span>
-          <nuxt-link to="./content">Clickbait</nuxt-link>
+          <nuxt-link to="./portfolio/websites">Websites</nuxt-link>
         </div>
       </div>
     </div>
@@ -44,18 +44,18 @@
 
     <div class="card">
       <div class="card-image">
-        <nuxt-link to="./content"><img src="~/assets/placeholders/720x450.png" width="720" height="450"></nuxt-link>
+        <nuxt-link to="./portfolio/websites/art-by-ch-website"><img src="~/assets/placeholders/720x450.png" width="720" height="450"></nuxt-link>
       </div>
       <div class="card-info">
         <div class="card-title">
-          <nuxt-link to="./content">
+          <nuxt-link to="./portfolio/websites/art-by-ch-website">
             <h3>What is beyond this card will amaze you!</h3>
           </nuxt-link>
         </div>
         <div class="card-category">
           <nuxt-link to="./portfolio">Portfolio</nuxt-link>
           <span> / </span>
-          <nuxt-link to="./content">Clickbait</nuxt-link>
+          <nuxt-link to="./portfolio/websites">Websites</nuxt-link>
         </div>
       </div>
     </div>
@@ -65,18 +65,18 @@
 
     <div class="card">
       <div class="card-image">
-        <nuxt-link to="./content"><img src="~/assets/placeholders/720x405.png" width="720" height="405"></nuxt-link>
+        <nuxt-link to="./portfolio/websites/art-by-ch-website"><img src="~/assets/placeholders/720x405.png" width="720" height="405"></nuxt-link>
       </div>
       <div class="card-info">
         <div class="card-title">
-          <nuxt-link to="./content">
+          <nuxt-link to="./portfolio/websites/art-by-ch-website">
             <h3>What is beyond this card will amaze you!</h3>
           </nuxt-link>
         </div>
         <div class="card-category">
           <nuxt-link to="./portfolio">Portfolio</nuxt-link>
           <span> / </span>
-          <nuxt-link to="./content">Clickbait</nuxt-link>
+          <nuxt-link to="./portfolio/websites">Websites</nuxt-link>
         </div>
       </div>
     </div>
@@ -85,18 +85,18 @@
 
     <div class="card">
       <div class="card-image">
-        <nuxt-link to="./content"><img src="~/assets/placeholders/720x360.png" width="720" height="360"></nuxt-link>
+        <nuxt-link to="./portfolio/websites/art-by-ch-website"><img src="~/assets/placeholders/720x360.png" width="720" height="360"></nuxt-link>
       </div>
       <div class="card-info">
         <div class="card-title">
-          <nuxt-link to="./content">
+          <nuxt-link to="./portfolio/websites/art-by-ch-website">
             <h3>What is beyond this card will amaze you!</h3>
           </nuxt-link>
         </div>
         <div class="card-category">
           <nuxt-link to="./portfolio">Portfolio</nuxt-link>
           <span> / </span>
-          <nuxt-link to="./content">Clickbait</nuxt-link>
+          <nuxt-link to="./portfolio/websites">Websites</nuxt-link>
         </div>
       </div>
     </div>

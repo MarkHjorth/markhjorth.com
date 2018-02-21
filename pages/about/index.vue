@@ -12,7 +12,7 @@
         He has a main focus on Software Development, User Experience, Automation, Privacy and Online Security.
       </p>
       <div class="links">
-        <nuxt-link class="button--green" to="./">Home</nuxt-link>
+        <nuxt-link class="button--green" to="/">Home</nuxt-link>
       </div>
     </div>
   </section>

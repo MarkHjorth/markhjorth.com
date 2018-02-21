@@ -10,7 +10,7 @@
       <p>This is the overall collection of my works which include my Android app development and awesome games I have been working on!
       Have a peak at the full list of the things I am most proud of below:</p>
       <div class="links">
-        <nuxt-link class="button--green" to="./">Home</nuxt-link>
+        <nuxt-link class="button--green" to="/">Home</nuxt-link>
       </div>
     </div>
   </section>
