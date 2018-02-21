@@ -1,6 +1,7 @@
 <template>
   <section class="container">
-    <div class="content">
+    <div>
+
       <h1 class="title">
         Content
       </h1>
@@ -15,6 +16,7 @@
       <div class="links">
         <nuxt-link class="button--green" to="./">Home</nuxt-link>
       </div>
+    
     </div>
   </section>
 </template>

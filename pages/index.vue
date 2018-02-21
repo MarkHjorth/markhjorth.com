@@ -1,12 +1,12 @@
 <template>
   <section class="container">
-    <div class="content">
+    <div>
 
 
 
     <div class="card">
       <div class="card-image">
-        <nuxt-link to="./content"><img src="https://via.placeholder.com/720x720" width="720" height="720"></nuxt-link>
+        <nuxt-link to="./content"><img src="~/assets/placeholders/720x720.png" width="720" height="720"></nuxt-link>
       </div>
       <div class="card-info">
         <div class="card-title">
@@ -25,7 +25,7 @@
 
     <div class="card">
       <div class="card-image">
-        <nuxt-link to="./content"><img src="https://via.placeholder.com/720/540" width="720" height="540"></nuxt-link>
+        <nuxt-link to="./content"><img src="~/assets/placeholders/720x540.png" width="720" height="540"></nuxt-link>
       </div>
       <div class="card-info">
         <div class="card-title">
@@ -44,7 +44,7 @@
 
     <div class="card">
       <div class="card-image">
-        <nuxt-link to="./content"><img src="https://via.placeholder.com/720/450" width="720" height="450"></nuxt-link>
+        <nuxt-link to="./content"><img src="~/assets/placeholders/720x450.png" width="720" height="450"></nuxt-link>
       </div>
       <div class="card-info">
         <div class="card-title">
@@ -65,7 +65,7 @@
 
     <div class="card">
       <div class="card-image">
-        <nuxt-link to="./content"><img src="https://via.placeholder.com/720/405" width="720" height="405"></nuxt-link>
+        <nuxt-link to="./content"><img src="~/assets/placeholders/720x405.png" width="720" height="405"></nuxt-link>
       </div>
       <div class="card-info">
         <div class="card-title">
@@ -85,7 +85,7 @@
 
     <div class="card">
       <div class="card-image">
-        <nuxt-link to="./content"><img src="https://via.placeholder.com/720/360" width="720" height="360"></nuxt-link>
+        <nuxt-link to="./content"><img src="~/assets/placeholders/720x360.png" width="720" height="360"></nuxt-link>
       </div>
       <div class="card-info">
         <div class="card-title">
