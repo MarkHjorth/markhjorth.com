@@ -25,7 +25,7 @@
 
     <div class="card">
       <div class="card-image">
-        <nuxt-link to="./portfolio/software-development/plai-internship"><img src="~/assets/placeholders/720x540.png" width="720" height="540"></nuxt-link>
+        <nuxt-link to="./portfolio/software-development/plai-internship"><img src="~/assets/4x3/720x540/plai-logo.jpg" width="720" height="540"></nuxt-link>
       </div>
       <div class="card-info">
         <div class="card-title">
