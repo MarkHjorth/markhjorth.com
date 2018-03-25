@@ -1,10 +1,7 @@
 <template>
   <div id="page" class="wrapper">
 
-    <header id="masterhead" class="header" role="banner">
-        <h1 class="title">Mark Hjorth</h1>
-        <h2 class="subtitle">Software, Game, Web and Android App Development</h2>
-    </header>
+    <navbar></navbar>
 
     <div id="content" class="content">
       <nuxt keep-alive/>
@@ -16,11 +13,13 @@
 </template>
 
 <script>
+import Navbar from '~/components/Header.vue'
 import NuxtFooter from '~/components/Footer.vue'
 export default
 {
   components:
   {
+    Navbar,
     NuxtFooter
   }
 }

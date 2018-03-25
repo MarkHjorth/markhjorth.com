@@ -55,6 +55,7 @@ p {
 
 .header {
   padding-top: 1em;
+  background-color: white;
   justify-content: center;
   align-items: center;
   text-align: center;

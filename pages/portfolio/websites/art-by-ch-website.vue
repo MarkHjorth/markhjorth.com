@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <div>
+    <article>
 
       <h1 class="title">
         Art By CH Website
@@ -14,7 +14,7 @@
         <nuxt-link class="button--green" to="/">Home</nuxt-link>
       </div>
     
-    </div>
+    </article>
   </section>
 </template>
 
