@@ -10,10 +10,10 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Mark Hjorth - Software, Game, Web and Android App Development',
+    title: 'Mark Hjorth - Software, Game and Web Development',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0'},
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, minimum-scale=1'},
       { hid: 'description', name: 'description', content: 'Mark Hjorth Does Software Development, Game Development, Android App Development, Web Development, Quality Assurance, Creates Distributed Systems, and more...' },
       { name: 'nativeUI', content: 'true' },
       { name: 'HandheldFriendly', content: 'true' },
