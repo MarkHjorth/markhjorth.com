@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background: #35495e;
+  background: #F2F2F2;
   text-align: left;
   height: 100%;
   width: 100%;
@@ -37,10 +37,6 @@ p {
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
   line-height: 1.5;
-}
-
-.wrapper {
-  background: #F2F2F2;
 }
 
 .container {
