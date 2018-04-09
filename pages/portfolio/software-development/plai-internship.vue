@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <article>
-
+      <img src="~/assets/4x3/720x540/plai-logo.jpg" width="720" height="540" alt="Go Plai Internship">
       <h1 class="title">
         Plai Internship
       </h1>

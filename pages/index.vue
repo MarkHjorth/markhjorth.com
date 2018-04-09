@@ -85,18 +85,18 @@
 
     <div class="card">
       <div class="card-image">
-        <nuxt-link to="./portfolio/websites/art-by-ch-website"><img src="~/assets/placeholders/720x360.png" width="720" height="360" alt="Art By CH Website"></nuxt-link>
+        <nuxt-link to="./portfolio/games/goblins-ruin-rpg-mobile-game"><img src="~/assets/4x3/720x540/goblins_of_ruins.jpg" width="720" height="540" alt="Legends Dawn: Goblins of Ruin RPG Mobile Game"></nuxt-link>
       </div>
       <div class="card-info">
         <div class="card-title">
-          <nuxt-link to="./portfolio/websites/art-by-ch-website" alt="Art By CH Website">
-            <h3>Art By CH Website</h3>
+          <nuxt-link to="./portfolio/games/goblins-ruin-rpg-mobile-game" alt="Legends Dawn: Goblins of Ruin RPG Mobile Game">
+            <h3>Legends Dawn: Goblins of Ruin RPG Mobile Game</h3>
           </nuxt-link>
         </div>
         <div class="card-category">
           <nuxt-link to="./portfolio" alt="Portfolio">Portfolio</nuxt-link>
           <span> / </span>
-          <nuxt-link to="./portfolio/websites" alt="Websites">Websites</nuxt-link>
+          <nuxt-link to="./portfolio/games" alt="Games">Games</nuxt-link>
         </div>
       </div>
     </div>
