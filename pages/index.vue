@@ -3,104 +3,28 @@
     <div>
 
 
-
-    <div class="card">
-      <div class="card-image">
-        <nuxt-link to="./portfolio/websites/art-by-ch-website"><img src="~/assets/placeholders/720x720.png" width="720" height="720" alt="Art By CH Website"></nuxt-link>
-      </div>
-      <div class="card-info">
-        <div class="card-title">
-          <nuxt-link to="./portfolio/websites/art-by-ch-website" alt="Art By CH Website">
-            <h3>Art By CH Website</h3>
-          </nuxt-link>
-        </div>
-        <div class="card-category">
-          <nuxt-link to="./portfolio" alt="Portfolio">Portfolio</nuxt-link>
-          <span> / </span>
-          <nuxt-link to="./portfolio/websites" alt="Websites">Websites</nuxt-link>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="card">
-      <div class="card-image">
-        <nuxt-link to="./portfolio/software-development/plai-internship"><img src="~/assets/4x3/720x540/plai-logo.jpg" width="720" height="540" alt="Go Plai Internship"></nuxt-link>
-      </div>
-      <div class="card-info">
-        <div class="card-title">
-          <nuxt-link to="./portfolio/software-development/plai-internship" alt="Go Plai Internship">
-            <h3>Plai Internship</h3>
-          </nuxt-link>
-        </div>
-        <div class="card-category">
-          <nuxt-link to="./portfolio" alt="Portfolio">Portfolio</nuxt-link>
-          <span> / </span>
-          <nuxt-link to="./portfolio/software-development" alt="Software Development">Software Development</nuxt-link>
-        </div>
-      </div>
-    </div>
+	    <div class="card" v-for="post in portfolioPosts" v-bind:key="post.category + '-' + post.slug">
+	      <div class="card-image">
+	        <nuxt-link :to="'./portfolio/' + post.category + '/' + post.slug"><img :src="post.imageDir" :width="post.imageW" :height="post.imageH" :alt="post.postName"></nuxt-link>
+	      </div>
+	      <div class="card-info">
+	        <div class="card-title">
+	          <nuxt-link :to="'./portfolio/' + post.category + '/' + post.slug" :alt="post.postName">
+	            <h3>{{post.postName}}</h3>
+	          </nuxt-link>
+	        </div>
+	        <div class="card-category">
+	          <nuxt-link to="./portfolio" alt="Portfolio">Portfolio</nuxt-link>
+	          <span> / </span>
+	          <nuxt-link :to="'./portfolio/' + post.category" :alt="post.categoryName">{{post.categoryName}}</nuxt-link>
+	        </div>
+	      </div>
+	    </div>
 
 
-    <div class="card">
-      <div class="card-image">
-        <nuxt-link to="./portfolio/websites/blomsterhaven-aalborg-website"><img src="~/assets/placeholders/720x450.png" width="720" height="450" alt="Blomsterhaven Aalborg Website"></nuxt-link>
-      </div>
-      <div class="card-info">
-        <div class="card-title">
-          <nuxt-link to="./portfolio/websites/blomsterhaven-aalborg-website" alt="Blomsterhaven Aalborg Website">
-            <h3>Blomsterhaven Aalborg Website</h3>
-          </nuxt-link>
-        </div>
-        <div class="card-category">
-          <nuxt-link to="./portfolio" alt="Portfolio">Portfolio</nuxt-link>
-          <span> / </span>
-          <nuxt-link to="./portfolio/websites" alt="Websites">Websites</nuxt-link>
-        </div>
-      </div>
-    </div>
-
-
-
-
-    <div class="card">
-      <div class="card-image">
-        <nuxt-link to="./portfolio/websites/lmp24-slot-racing-website"><img src="~/assets/placeholders/720x405.png" width="720" height="405" alt="LMP24 Slot Racing Website"></nuxt-link>
-      </div>
-      <div class="card-info">
-        <div class="card-title">
-          <nuxt-link to="./portfolio/websites/lmp24-slot-racing-website" alt="LMP24 Slot Racing Website">
-            <h3>LMP24 Slot Racing Website</h3>
-          </nuxt-link>
-        </div>
-        <div class="card-category">
-          <nuxt-link to="./portfolio" alt="Portfolio">Portfolio</nuxt-link>
-          <span> / </span>
-          <nuxt-link to="./portfolio/websites" alt="Websites">Websites</nuxt-link>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class="card">
-      <div class="card-image">
-        <nuxt-link to="./portfolio/games/goblins-ruin-rpg-mobile-game"><img src="~/assets/4x3/720x540/goblins_of_ruins.jpg" width="720" height="540" alt="Legends Dawn: Goblins of Ruin RPG Mobile Game"></nuxt-link>
-      </div>
-      <div class="card-info">
-        <div class="card-title">
-          <nuxt-link to="./portfolio/games/goblins-ruin-rpg-mobile-game" alt="Legends Dawn: Goblins of Ruin RPG Mobile Game">
-            <h3>Legends Dawn: Goblins of Ruin RPG Mobile Game</h3>
-          </nuxt-link>
-        </div>
-        <div class="card-category">
-          <nuxt-link to="./portfolio" alt="Portfolio">Portfolio</nuxt-link>
-          <span> / </span>
-          <nuxt-link to="./portfolio/games" alt="Games">Games</nuxt-link>
-        </div>
-      </div>
-    </div>
-
+  </div>
+  </section>
+</template>
 
 <!--  Aspect ratios
     1:1 - 720x720
@@ -110,16 +34,69 @@
     2:1 - 720x360
 -->
 
-
-
-  </div>
-  </section>
-</template>
-
 <script>
 export default {
   head: {
     title: 'Mark Hjorth - Software, Game and Web Development'
-  }
+  },
+  data: () => ({
+    portfolioPosts: [
+      {
+        postName: 'Art By CH Website',
+        title: 'Art By CH Website, Portfolio and Webshop',
+        category: 'websites',
+        categoryName: 'Websites',
+        slug: 'art-by-ch-website',
+        imageDir: 'art-by-ch.jpg',
+        imageH: '540',
+        imageW: '720',
+        content: 'Art By CH is a website with the possibility to see and buy art from Christina Thomsen. On the site you will find anything from paintings to ceramic, along with the original works or prints. Christina’s works are primarily painted with watercolours and acrylic paint. Her works has focus on the human and what is happening around us. Human emotions play a big part and every picture has its own story, which is also present in her works in what colours and expressions she uses. The works should be able to speak for itself.'
+      },
+      {
+        postName: 'Plai Internship',
+        title: 'My Plai Internship as a full stack developer and what I\'ve learned',
+        category: 'software-development',
+        categoryName: 'Software Development',
+        slug: 'plai-internship',
+        imageDir: 'plai-logo.jpg',
+        imageH: '540',
+        imageW: '720',
+        content: 'For the past month I have been an intern at Plai. It has been a great experience where I got to dive into full stack development of a gaming platform. I had such a great time at Plai, and although being done with the internship is sad, I want to focus on how good an experience it has been for me.'
+      },
+      {
+        postName: 'Blomsterhaven Aalborg Website',
+        title: 'Private Daycare Blomsterhaven Aalborg Website',
+        category: 'websites',
+        categoryName: 'Websites',
+        slug: 'blomsterhaven-aalborg-website',
+        imageDir: 'blomsterhaven.jpg',
+        imageH: '540',
+        imageW: '720',
+        content: 'This website was created for the Aalborg based daycare Blomsterhaven Aalborg.'
+      },
+      {
+        postName: 'LMP24 Slot Racing Website',
+        title: 'LMP24 Slot Racing Website',
+        category: 'websites',
+        categoryName: 'Websites',
+        slug: 'lmp24-slot-racing-website',
+        imageDir: 'lmp24.jpg',
+        imageH: '540',
+        imageW: '720',
+        content: 'LMP24 is a website for slot racing.'
+      },
+      {
+        postName: 'Legends Dawn: Goblins of Ruin RPG mobile game',
+        title: 'Legends Dawn: Goblins of Ruin RPG mobile game',
+        category: 'games',
+        categoryName: 'Games',
+        slug: 'goblins-ruin-rpg-mobile-game',
+        imageDir: 'goblins_of_ruins.jpg',
+        imageH: '540',
+        imageW: '720',
+        content: 'Legends Dawn Goblins of Ruin is a mini indie RPG mobile game for Android with focus on loot progression and beautiful pixel artwork.'
+      }
+    ]
+  }),
 }
 </script>
