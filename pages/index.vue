@@ -95,6 +95,17 @@ export default {
         imageH: '540',
         imageW: '720',
         content: 'Legends Dawn Goblins of Ruin is a mini indie RPG mobile game for Android with focus on loot progression and beautiful pixel artwork.'
+      },
+      {
+        postName: 'Haunted House Online Slot Machine Game',
+        title: 'Haunted House Online Slot Machine Game',
+        category: 'games',
+        categoryName: 'Games',
+        slug: 'haunted-house-slot-machine-game',
+        imageDir: 'hauntedhouse.jpg',
+        imageH: '540',
+        imageW: '720',
+        content: 'Haunted House is an online slot machine game with 9 reels. The game offers 2 progressive jackpots along with 3 thrilling bonus games; “Beware of Dog”, “Spooky Rooms” and “Haunted Hallways”.'
       }
     ]
   }),
