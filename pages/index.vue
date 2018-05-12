@@ -4,8 +4,13 @@
 
 
 	    <div class="card" v-for="post in portfolioPosts" v-bind:key="post.category + '-' + post.slug">
-	      <div class="card-image">
-	        <nuxt-link :to="'./portfolio/' + post.category + '/' + post.slug"><img :src="post.imageDir" :width="post.imageW" :height="post.imageH" :alt="post.postName"></nuxt-link>
+	      <div class="card-image" itemscope itemtype="http://schema.org/ImageObject">
+	        <nuxt-link :to="'./portfolio/' + post.category + '/' + post.slug">
+	        	<img itemprop="url" :src="post.imageDir" :width="post.imageW" :height="post.imageH" :alt="post.postName">
+	        	<meta itemprop="name" :content="post.postName">
+	        	<meta itemprop="width" :content="post.imageW">
+				<meta itemprop="height" :content="post.imageH">
+			</nuxt-link>
 	      </div>
 	      <div class="card-info">
 	        <div class="card-title">
@@ -18,6 +23,7 @@
 	          <span> / </span>
 	          <nuxt-link :to="'./portfolio/' + post.category" :alt="post.categoryName">{{post.categoryName}}</nuxt-link>
 	        </div>
+	        <div class="card-date">{{post.date}}</div>
 	      </div>
 	    </div>
 
@@ -44,6 +50,7 @@ export default {
       {
         postName: 'Art By CH Website',
         title: 'Art By CH Website, Portfolio and Webshop',
+        date: 'January 30, 2018',
         category: 'websites',
         categoryName: 'Websites',
         slug: 'art-by-ch-website',
@@ -55,6 +62,7 @@ export default {
       {
         postName: 'Plai Internship',
         title: 'My Plai Internship as a full stack developer and what I\'ve learned',
+        date: 'December 27, 2017',
         category: 'software-development',
         categoryName: 'Software Development',
         slug: 'plai-internship',
@@ -66,6 +74,7 @@ export default {
       {
         postName: 'Blomsterhaven Aalborg Website',
         title: 'Private Daycare Blomsterhaven Aalborg Website',
+        date: 'August 23, 2017',
         category: 'websites',
         categoryName: 'Websites',
         slug: 'blomsterhaven-aalborg-website',
@@ -77,6 +86,7 @@ export default {
       {
         postName: 'LMP24 Slot Racing Website',
         title: 'LMP24 Slot Racing Website',
+        date: 'August 9, 2017',
         category: 'websites',
         categoryName: 'Websites',
         slug: 'lmp24-slot-racing-website',
@@ -88,6 +98,7 @@ export default {
       {
         postName: 'Legends Dawn: Goblins of Ruin RPG mobile game',
         title: 'Legends Dawn: Goblins of Ruin RPG mobile game',
+        date: 'June 10, 2017',
         category: 'games',
         categoryName: 'Games',
         slug: 'goblins-ruin-rpg-mobile-game',
@@ -99,6 +110,7 @@ export default {
       {
         postName: 'Haunted House Online Slot Machine Game',
         title: 'Haunted House Online Slot Machine Game',
+        date: 'December 1, 2016',
         category: 'games',
         categoryName: 'Games',
         slug: 'haunted-house-slot-machine-game',
