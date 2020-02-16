@@ -109,7 +109,7 @@ p {
   background: #FAFAFA;
   position: relative;
   max-width: 720px;
-  margin: 2em auto;
+  margin: 3em auto;
   text-shadow: none;
   padding: 0;
   border-radius: 0.5em;
@@ -118,7 +118,7 @@ p {
   text-align: left;
   border: 1px solid #b2b2b2;
   border-radius: 0.6em;
-  transition: 250ms;
+  transition: 50ms;
 }
 
 .card:hover, .card:focus {

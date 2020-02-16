@@ -2,7 +2,7 @@
 node_modules
 
 # logs
-npm-debug.log
+*.log
 
 # other
 .nuxt
@@ -14,4 +14,3 @@ newrelic_agent.log
 
 # Service worker for PWA
 static/sw.js
-package-lock.json
