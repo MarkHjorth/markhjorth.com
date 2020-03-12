@@ -1,66 +1,77 @@
-module.exports = {
+import pkg from './package'
 
-  /*
-  ** Modules
-  */
-  modules: [
-        '@nuxtjs/pwa',
-    ],
+export default {
+  mode: 'universal',
+
   /*
   ** Headers of the page
   */
   head: {
-    title: 'Mark Hjorth - Software, Game, Web and Android App Development',
+    title: pkg.name,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Mark Hjorth Does Software Development, Game Development, Android App Development, Web Development, Quality Assurance, Creates Distributed Systems, and more...' }
+      { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
   /*
-  ** Caching
+  ** Customize the progress-bar color
   */
-  render: {
-    bundleRenderer: {
-      cache: require('lru-cache')({
-        max: 1000,
-        maxAge: 1000 * 60 * 15
-      })
-    }
-  },
+  loading: { color: '#fff' },
+
   /*
-  ** CSS
+  ** Global CSS
   */
   css: [
     '~/assets/main.css'
   ],
+
   /*
-  ** Customize the progress bar color
+  ** Plugins to load before mounting the App
   */
-  loading: {
-    color: '#4FC08D',
-    failedColor: '#bf5050',
-    duration: 2500
+  plugins: [
+  ],
+
+  /*
+  ** Nuxt.js modules
+  */
+  modules: [
+    // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa',
+  ],
+  /*
+  ** Axios module configuration
+  */
+  axios: {
+    // See https://github.com/nuxt-community/axios-module#options
   },
+
   /*
   ** Build configuration
   */
   build: {
     /*
-    ** Run ESLint on save
+    ** You can extend webpack config here
     */
-    extend (config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
+    extend(config, ctx) {
     }
+  },
+
+  /*
+  ** Dynamic routes for generating
+  */
+  generate: {
+    routes: [
+      '/dansk-spiloversaettelse-af-feudal-alloy/',
+      '/danish-game-translation-feudal-alloy/',
+      '/art-by-ch-website',
+      '/art-by-ch-hjemmeside'
+    ]
   }
+
 }

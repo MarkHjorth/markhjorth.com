@@ -1,7 +1,6 @@
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
+  font: 1em/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -18,9 +17,8 @@ html {
 }
 
 body {
-  background: #F2F2F2;
+  background: #fff;
   text-align: left;
-  padding-top: 2em;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -29,9 +27,11 @@ body {
 }
 
 p {
+  font-size: 1.2em;
   text-align: left;
   display: block;
   color: #2d2d2d;
+  padding: 0 1em 0;
   -webkit-margin-before: 1.5em;
   -webkit-margin-after: 1.5em;
   -webkit-margin-start: 0px;
@@ -49,7 +49,16 @@ p {
 
 .content {
   max-width: 600px;
-  margin: 0 2em 2em;
+  margin: auto;
+  padding: 1em;
+}
+
+.header {
+  padding-top: 1em;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .title {
@@ -97,25 +106,17 @@ p {
 }
 
 .card {
-  background: #FFF;
+  background: #FAFAFA;
   position: relative;
   max-width: 720px;
-  margin: 2em auto;
+  margin: 3em auto;
   text-shadow: none;
   padding: 0;
   border-radius: 0.5em;
-  transition: 0.3s;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
   text-align: left;
-  border: 1px solid #b2b2b2;
   border-radius: 0.6em;
-}
-
-.card:hover, .card:focus {
-    -webkit-box-shadow: 0 8px 16px 2px rgba(0,0,0,0.35);
-    box-shadow: 0 8px 16px 2px rgba(0,0,0,0.35);
-    z-index: 300;
 }
 
 .card-image {
@@ -152,65 +153,33 @@ p {
 
 .card-category a:hover {
   color: #528864;
+  text-decoration: underline;
+}
+
+.site-footer {
+	background-color: #35495e;
+	color: white;
+	padding: 2em;
+	text-align: center;
+}
+
+.site-footer a {
+	text-decoration: none;
+	color: white;
+}
+
+.site-footer a:hover {
+	text-decoration: underline;
 }
 
 @media (max-width: 600px)
 {
   .content { max-width: 100%; }
-  .title { font-size: 13vw; transition: 0.5s; }
-  .subtitle { font-size: 6vw; transition: 0.5s; }
+  .title { font-size: 13vw; }
+  .subtitle { font-size: 6vw; }
 }
 
 @media (min-width: 600px)
 {
-  .content { max-width: 600px; transition: 0.5s; }
-  .title { transition: 0.5s; }
+  .content { max-width: 600px; }
 }
-
-
-/*
-
-@media (max-width: 700px)
-{
-  .content { max-width: 100%; }
-  .title { font-size: 13vw; transition: 0.5s; }
-  .subtitle { font-size: 6vw; transition: 0.5s; }
-}
-
-@media (min-width: 700px)
-{
-  .content { max-width: 700px; transition: 0.5s; }
-  .title { transition: 0.5s; }
-}
-
-@media (min-width: 800px)
-{
-  .content { max-width: 800px; transition: 0.5s; }
-}
-
-@media (min-width: 900px)
-{
-  .content { max-width: 900px; transition: 0.5s; }
-}
-
-/*
-@media (min-width: 1280px)
-{
-  .content { max-width: 1280px; transition: 0.5s; }
-}
-
-@media (min-width: 1366px)
-{
-  .content { max-width: 1366px; transition: 0.5s; }
-}
-
-@media (min-width: 1680px)
-{
-  .content { max-width: 1680px; transition: 0.5s; }
-}
-
-@media (min-width: 1920px)
-{
-  .content { max-width: 1920px; transition: 0.5s; }
-}
-*/
