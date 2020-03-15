@@ -40,7 +40,7 @@
 <script>
   export default {
     async asyncData({ app }) {
-      let posts = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/posts?per_page=100')
+      let posts = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/posts?per_page=100&_embed')
 
       for (var i = 0; i < posts.length; i++) {
           //Date:
@@ -58,7 +58,7 @@
             for (var k = 0; k < categories.length; k++) {
               var category = categories[k]
               if (category != null && category != "" && category != 0) {
-                let categoryObj = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/categories/'+category)
+                let categoryObj = posts[i]["_embedded"]["wp:term"][k][0]
                 posts[i].categories[k] = categoryObj
               }
             }
@@ -67,7 +67,7 @@
           //Media:
           var mediaId = posts[i].featured_media
           if(mediaId != null && mediaId != "") {
-            let media = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/media/'+mediaId)
+            let media = posts[i]["_embedded"]["wp:featuredmedia"][0]
             posts[i].featured_media = media
           }
         }

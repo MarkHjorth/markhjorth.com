@@ -25,9 +25,9 @@ export default {
   },
   async asyncData({ params, error, app }) {
     try {
-      let data = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/posts?slug=' + params.id)
+      let data = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/posts?_embed&slug=' + params.id)
       if (data[0] == null) {
-        let data = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/pages?slug=' + params.id)
+        let data = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/pages?_embed&slug=' + params.id)
       }
       //date
       if (data[0] != null) {
@@ -42,17 +42,17 @@ export default {
         //Media
         var mediaId = data[0].featured_media
         if(mediaId != null && mediaId != "") {
-          let media = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/media/'+mediaId)
+          let media = data[0]["_embedded"]["wp:featuredmedia"][0]
           data[0].featured_media = media
         }
 
         return {data}
       } else {
-        error({ message: 'Page not found', statusCode: 404 })
+        error({ message: 'Page not found 🙁', statusCode: 404 })
       }
     } catch (e) {
       console.log("Exception: " + e)
-      error({ message: 'Page not found', statusCode: 404 })
+      error({ message: 'An unknown error occoured', statusCode: 500 })
     }
   }
 }
