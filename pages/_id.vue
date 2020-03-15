@@ -1,5 +1,7 @@
 <template>
+  <section class="container">
     <div itemscope itemtype="http://schema.org/Article">
+
       <h1 itemprop="headline">{{data[0].title.rendered}}</h1>
       <div itemprop="image" v-if="data[0].featured_media.media_details != null" itemscope itemtype="http://schema.org/ImageObject">
           <img itemprop="url"
@@ -15,7 +17,9 @@
       <meta itemprop="dateModified" :content="data[0].modified">
       <meta itemprop="mainEntityOfPage" :content="data[0].link">
       <span v-html="data[0].content.rendered"></span>
+
     </div>
+  </section>
 </template>
 
 <script>
