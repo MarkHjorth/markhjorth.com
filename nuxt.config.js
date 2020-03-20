@@ -51,7 +51,8 @@ export default {
         max: 1000,
         maxAge: 1000 * 60 * 15
       })
-    }
+    },
+    csp: true
   },
 
   /*
@@ -97,6 +98,7 @@ export default {
   ** Dynamic routes for generating
   */
   generate: {
+    fallback: true,
     routes: [
       '/dansk-spiloversaettelse-af-feudal-alloy/',
       '/danish-game-translation-feudal-alloy/',

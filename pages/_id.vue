@@ -50,6 +50,8 @@ export default {
           data[0].featured_media = media
         }
 
+        document.title = data[0].title.rendered + " - Mark Hjorth";
+
         return {data}
       } else {
         error({ message: 'Page not found 🙁', statusCode: 404 })
