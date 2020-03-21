@@ -51,8 +51,8 @@ export default {
         max: 1000,
         maxAge: 1000 * 60 * 15
       })
-    },
-    csp: true
+    }
+    // csp: true
   },
 
   /*
