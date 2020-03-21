@@ -4,14 +4,14 @@
 
       <h1 itemprop="headline">{{data[0].title.rendered}}</h1>
       <div itemprop="image" v-if="data[0].featured_media.media_details != null" itemscope itemtype="http://schema.org/ImageObject">
-          <img itemprop="url"
-          :src="data[0].featured_media.source_url"
-          :width="data[0].featured_media.media_details.width"
-          :height="data[0].featured_media.media_details.height"
-          :alt="data[0].featured_media.alt_text">
-          <meta itemprop="name" :content="data[0].featured_media.alt_text">
-          <meta itemprop="width" :content="data[0].featured_media.media_details.width">
-          <meta itemprop="height" :content="data[0].featured_media.media_details.height">
+        <img itemprop="url"
+        :src="data[0].featured_media.source_url"
+        :width="data[0].featured_media.media_details.width"
+        :height="data[0].featured_media.media_details.height"
+        :alt="data[0].featured_media.alt_text">
+        <meta itemprop="name" :content="data[0].featured_media.alt_text">
+        <meta itemprop="width" :content="data[0].featured_media.media_details.width">
+        <meta itemprop="height" :content="data[0].featured_media.media_details.height">
       </div>
       <span itemprop="datePublished">{{data[0].date}}</span>
       <meta itemprop="dateModified" :content="data[0].modified">
@@ -23,16 +23,16 @@
 </template>
 
 <script>
-export default {
-  validate({ params }) {
-    return (params)
-  },
-  async asyncData({ params, error, app }) {
-    try {
-      let data = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/posts?_embed&slug=' + params.id)
-      if (data[0] == null) {
-        let data = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/pages?_embed&slug=' + params.id)
-      }
+  export default {
+    validate({ params }) {
+      return (params)
+    },
+    async asyncData({ params, error, app }) {
+      try {
+        let data = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/posts?_embed&slug=' + params.id)
+        if (data[0] == null) {
+          let data = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/pages?_embed&slug=' + params.id)
+        }
       //date
       if (data[0] != null) {
         var date = data[0].date
@@ -50,15 +50,20 @@ export default {
           data[0].featured_media = media
         }
 
-        document.title = data[0].title.rendered + " - Mark Hjorth";
+        let title = data[0].title.rendered + " - Mark Hjorth"
 
-        return {data}
+        return {data, title}
       } else {
         error({ message: 'Page not found 🙁', statusCode: 404 })
       }
     } catch (e) {
       console.log("Exception: " + e)
       error({ message: 'An unknown error occoured', statusCode: 500 })
+    }
+  },
+  head() {
+    return {
+      title: this.title
     }
   }
 }
