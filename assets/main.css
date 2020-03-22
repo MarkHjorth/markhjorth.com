@@ -119,6 +119,7 @@ p {
 }
 
 .card-category, .card-category a {
+  padding-top: 0.5em;
   color: #526488;
   text-decoration: none;
 }
