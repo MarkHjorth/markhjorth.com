@@ -100,13 +100,39 @@ export default {
   */
   generate: {
     fallback: true,
-    routes () {
-      return axios.get('https://markhjorth.com/wp-json/wp/v2/posts?_fields=slug&per_page=100')
-        .then((slugDataList) => {
-          return slugDataList.data.map((slugData) => {
-            return '/' + slugData.slug
-          })
-        })
+    routes() {
+    	function getPosts() {
+		  return axios.get('https://markhjorth.com/wp-json/wp/v2/posts?_fields=slug&per_page=100')
+	        .then((slugDataList) => {
+	          return slugDataList.data.map((slugData) => {
+	            return '/' + slugData.slug
+	          })
+	        })
+		}
+
+		function getPages() {
+		  return axios.get('https://markhjorth.com/wp-json/wp/v2/pages?_fields=slug&per_page=100')
+	        .then((slugDataList) => {
+	          return slugDataList.data.map((slugData) => {
+	            return '/' + slugData.slug
+	          })
+	        })
+		}
+
+		function getCategories() {
+		  return axios.get('https://markhjorth.com/wp-json/wp/v2/categories?_fields=slug&per_page=100')
+	        .then((slugDataList) => {
+	          return slugDataList.data.map((slugData) => {
+	            return '/' + slugData.slug
+	          })
+	        })
+		}
+
+		return axios.all([getPosts(), getPages(), getCategories()])
+		  .then(axios.spread(function (posts, pages, categories) {
+		  	let slugs = [...pages, ...posts, ...categories]
+		    return slugs
+		  }));
     }
   }
 
