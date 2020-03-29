@@ -23,10 +23,10 @@
               <h3>{{post.title.rendered}}</h3>
             </nuxt-link>
           </div>
+          <div class="card-date">{{post.date}}</div>
           <div class="card-category">
             <nuxt-link :to="post.categories[0].slug" alt="post.categories[0].name">{{post.categories[0].name}}</nuxt-link>
           </div>
-          <div class="card-date">{{post.date}}</div>
         </div>
       </div>
 

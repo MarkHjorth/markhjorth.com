@@ -1,8 +1,8 @@
 {
   "name": "markhjorth",
   "version": "1.0.0",
-  "description": "Mark Hjorth Does Software Development, Game Development, Web Development, and more...",
-  "author": "Mark Hjorth Sørensen",
+  "description": "Mark Hjorth does Software Development, Game Development, Web Development, and more...",
+  "author": "Mark Hjorth",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -11,8 +11,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.9.5",
-    "@nuxtjs/pwa": "^2.6.0",
+    "@nuxtjs/axios": "latest",
+    "@nuxtjs/pwa": "latest",
     "cross-env": "^5.2.1",
     "lru-cache": "^4.0.2",
     "nuxt": "latest"

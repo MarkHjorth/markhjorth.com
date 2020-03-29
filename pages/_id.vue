@@ -16,7 +16,12 @@
       <span itemprop="datePublished">{{data[0].date}}</span>
       <meta itemprop="dateModified" :content="data[0].modified">
       <meta itemprop="mainEntityOfPage" :content="data[0].link">
-      <span v-html="data[0].content.rendered"></span>
+      <div v-if="data[0].content != null">
+        <span v-html="data[0].content.rendered"></span>
+      </div>
+      <div v-else-if="data[0].description != null">
+        <span v-html="data[0].description"></span>
+      </div>
 
     </div>
   </section>
@@ -29,9 +34,9 @@
     },
     async asyncData({ params, error, app }) {
       try {
-        let data = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/posts?_embed&slug=' + params.id)
+        var data = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/posts?_embed&slug=' + params.id)
         if (data[0] == null) {
-          let data = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/pages?_embed&slug=' + params.id)
+          data = await app.$axios.$get('https://markhjorth.com/wp-json/wp/v2/pages?_embed&slug=' + params.id)
         }
       //date
       if (data[0] != null) {
