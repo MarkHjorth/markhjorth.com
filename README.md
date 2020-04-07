@@ -1,6 +1,6 @@
-# markhjorth.me
+# markhjorth.com
 
-> Mark Hjorth is a Software and Game Developer from Aalborg, Denmark. This is my public contact card and overview over my social profiles.
+> Mark Hjorth is a Software and Game Developer from Aalborg, Denmark.
 
 ## Build Setup
 
@@ -19,4 +19,4 @@ $ npm start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+For detailed explanation on Nuxt, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
