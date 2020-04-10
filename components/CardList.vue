@@ -1,16 +1,16 @@
 <template>
 	<div class="card-list">
 		<div class="card" v-for="post in articlesList" v-bind:key="post.id">
-			<div v-if="post['_embedded']['wp:featuredmedia'] != null" class="card-image" itemscope itemtype="http://schema.org/ImageObject">
+			<div v-if="post.featuredMedia!= null" class="card-image" itemscope itemtype="http://schema.org/ImageObject">
 				<nuxt-link :to="post.slug">
 					<img itemprop="url"
-					:src="post['_embedded']['wp:featuredmedia'].source_url"
-					:width="post['_embedded']['wp:featuredmedia'].media_details.width"
-					:height="post['_embedded']['wp:featuredmedia'].media_details.height"
-					:alt="post['_embedded']['wp:featuredmedia'].alt_text">
-					<meta itemprop="name" :content="post['_embedded']['wp:featuredmedia'].alt_text">
-					<meta itemprop="width" :content="post['_embedded']['wp:featuredmedia'].media_details.width">
-					<meta itemprop="height" :content="post['_embedded']['wp:featuredmedia'].media_details.height">
+					:src="post.featuredMedia.source_url"
+					:width="post.featuredMedia.media_details.width"
+					:height="post.featuredMedia.media_details.height"
+					:alt="post.featuredMedia.alt_text">
+					<meta itemprop="name" :content="post.featuredMedia.alt_text">
+					<meta itemprop="width" :content="post.featuredMedia.media_details.width">
+					<meta itemprop="height" :content="post.featuredMedia.media_details.height">
 				</nuxt-link>
 			</div>
 			<div class="card-info">
