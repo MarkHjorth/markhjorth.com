@@ -17,14 +17,25 @@ html {
   margin: 0;
 }
 
-body {
+:root {
   background: #fff;
+}
+
+body {
   text-align: left;
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+a {
+  color: #1C7822;
+}
+
+a:hover {
+  color: #59A85E;
 }
 
 p {
@@ -56,7 +67,6 @@ p {
 
 .header {
   padding-top: 1em;
-  background-color: white;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -155,4 +165,44 @@ p {
 @media (min-width: 600px)
 {
   .content { max-width: 600px; }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #38444c;
+    background: #38444c;
+    --color-text-default: #E6E6E6;
+    color: #E6E6E6;
+  }
+  .card {
+    --color-background: #35495e;
+    background: #35495e;
+  }
+  .card-title, .card-title a {
+    color: #fff;
+  }
+  .card-title a:hover {
+    color: #35E541;
+  }
+  .card-category, .card-category a {
+    color: #CFCFCF;
+  }
+  .card-category a:hover {
+    color: #35E541;
+  }
+  p {
+    color: #E6E6E6;
+  }
+  .title {
+    color: #D8E9FB;
+  }
+  .subtitle {
+    color: #CCDCEE;
+  }
+  a {
+    color: #2DC437;
+  }
+  a:hover {
+    color: #35E541;
+  }
 }
