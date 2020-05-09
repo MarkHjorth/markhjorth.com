@@ -21,6 +21,8 @@ export default {
     ],
 
     link: [
+      { rel: 'preconnect', href: 'markhjorth.com', crossorigin: 'crossorigin' },
+      { rel: 'dns-prefetch', href: 'markhjorth.com', crossorigin: 'crossorigin' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'canonical', href: 'https://beta.markhjorth.com' },
     ]
