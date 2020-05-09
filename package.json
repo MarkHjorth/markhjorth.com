@@ -13,9 +13,10 @@
   "dependencies": {
     "@nuxtjs/axios": "latest",
     "@nuxtjs/pwa": "latest",
+    "nuxt": "latest",
     "cross-env": "^5.2.1",
     "lru-cache": "^4.0.2",
-    "nuxt": "latest"
+    "vue-lazyload": "^1.3.3"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"

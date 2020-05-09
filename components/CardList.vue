@@ -5,7 +5,8 @@
 				<nuxt-link :to="post.slug">
 					<img itemprop="url"
 					loading="lazy"
-					:src="post.featuredMedia.source_url"
+					v-lazy="post.featuredMedia.source_url"
+					src="/placeholder.gif"
 					:width="post.featuredMedia.media_details.width"
 					:height="post.featuredMedia.media_details.height"
 					:alt="post.featuredMedia.alt_text">
