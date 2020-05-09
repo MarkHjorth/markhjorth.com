@@ -5,6 +5,7 @@
       <h1 itemprop="headline">{{data[0].title.rendered}}</h1>
       <div itemprop="image" v-if="data[0].featured_media.media_details != null" itemscope itemtype="http://schema.org/ImageObject">
         <img itemprop="url"
+        loading="lazy"
         :src="data[0].featured_media.source_url"
         :width="data[0].featured_media.media_details.width"
         :height="data[0].featured_media.media_details.height"

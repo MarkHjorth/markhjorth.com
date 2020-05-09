@@ -4,6 +4,7 @@
 			<div v-if="post.featuredMedia!= null" class="card-image" itemscope itemtype="http://schema.org/ImageObject">
 				<nuxt-link :to="post.slug">
 					<img itemprop="url"
+					loading="lazy"
 					:src="post.featuredMedia.source_url"
 					:width="post.featuredMedia.media_details.width"
 					:height="post.featuredMedia.media_details.height"
