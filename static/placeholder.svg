@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background-color: rgb(237, 237, 237); display: block; background-position: initial initial; background-repeat: initial initial;" width="568px" height="410px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+	<circle
+		id="spinner"
+		cx="50"
+		cy="50"
+		fill="none"
+		stroke="#59a85e"
+		stroke-width="5"
+		r="15.91549430918954"
+		stroke-dasharray="10 90">
+		<animateTransform
+			attributeName="transform"
+			type="rotate"
+			repeatCount="indefinite"
+			dur="1s"
+			values="0 50 50;360 50 50"
+			keyTimes="0;1"/>
+		<animateTransform
+			attributeName="stroke-dasharray"
+			repeatCount="indefinite"
+			dur="3s"
+			values="10 90;50 50;75 25;50 50;10 90"
+			keyTimes="0;0.2;0.4;0.8;1"/>
+		<animate
+			xlink:href="#spinner"
+			attributeName="stroke"
+			values="#4285F4;#34A853;#FBBC05;#EA4335;#4285F4;"
+			dur="15s"
+			repeatCount="indefinite"
+			id="changeColor"/>
+	</circle>
+</svg>

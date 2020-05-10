@@ -6,7 +6,7 @@
 					<img itemprop="url"
 					loading="lazy"
 					v-lazy="post.featuredMedia.source_url"
-					src="/placeholder.gif"
+					src="/placeholder.svg"
 					:width="post.featuredMedia.media_details.width"
 					:height="post.featuredMedia.media_details.height"
 					:alt="post.featuredMedia.alt_text">
