@@ -21,9 +21,8 @@ export default {
     ],
 
     link: [
-      { rel: 'preload', href: '/placeholder.svg', as: 'image', crossorigin: 'crossorigin' },    
-      { rel: 'preconnect', href: 'markhjorth.com', crossorigin: 'crossorigin' },
-      { rel: 'dns-prefetch', href: 'markhjorth.com', crossorigin: 'crossorigin' },
+      { rel: 'preconnect', href: 'https://markhjorth.com', crossorigin: 'crossorigin' },
+      { rel: 'dns-prefetch', href: 'https://markhjorth.com', crossorigin: 'crossorigin' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'canonical', href: 'https://beta.markhjorth.com' },
     ]
