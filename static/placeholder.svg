@@ -7,7 +7,7 @@
 		stroke="#59a85e"
 		stroke-width="5"
 		r="15.91549430918954"
-		stroke-dasharray="65 35">
+		stroke-dasharray="10 90">
 		<animateTransform
 			attributeName="transform"
 			type="rotate"
