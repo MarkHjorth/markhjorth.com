@@ -25,7 +25,7 @@
 			xlink:href="#spinner"
 			attributeName="stroke"
 			values="#4285F4;#34A853;#FBBC05;#EA4335;#4285F4;"
-			dur="15s"
+			dur="12s"
 			repeatCount="indefinite"
 			id="changeColor"/>
 	</circle>
